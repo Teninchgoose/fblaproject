@@ -1,4 +1,4 @@
 public class process
 {
-  System.oout.println("Hi");
+  System.out.println("Hi");
 }
