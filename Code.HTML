@@ -4,11 +4,7 @@
 <title>Student Involvement</title>
 </head>
 <body bgcolor="navy" text="white">
-<form name="studentmaker" method="post" action="loginServlet">
-    Username: <input type="text" name="username"/> <br/>
-    Password: <input type="password" name="password"/> <br/>
-    <input type="submit" value="Login" />
-</form>
+
 <center><h1>Student Involvement</h1></center>
 
 <h3>Events:</h3>
@@ -32,8 +28,14 @@
   <input type="text" id="fname" name="fname"><br><br>
   <label for="lname">Last name:</label>
   <input type="text" id="lname" name="lname"><br><br>
-  <input type="button" onclick="formSubmit()" value="Send form data!">
 </form>
+
+<select name="Select Grade" id="grade">
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+</select>
 
 <center>
 <h4>Did you attend the dance this quarter?</h4>
@@ -157,15 +159,17 @@
 </div>
 <br>
 </center>
+  <input type="button" onclick="formSubmit()" value="Submit Data">
 
 
 
 <select name="Select Quarter" id="quarter">
-  <option value="quarter 1">quarter 1</option>
-  <option value="quarter 2">quarter 2</option>
-  <option value="quarter 3">quarter 3</option>
-  <option value="quarter 4">quarter 4</option>
+  <option value="quarter 1">Quarter 1</option>
+  <option value="quarter 2">Quarter 2</option>
+  <option value="quarter 3">Quarter 3</option>
+  <option value="quarter 4">Quarter 4</option>
 </select>
+<button type="button">Generate Quarter Report</button>
 </body>
 </html>
 
