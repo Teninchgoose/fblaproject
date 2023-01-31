@@ -3,12 +3,14 @@
 <head>
 <title>Student Involvement</title>
 </head>
-<body bgcolor="blue" text="white">
-<form name="loginForm" method="post" action="loginServlet">
+<body bgcolor="navy" text="white">
+<form name="studentmaker" method="post" action="loginServlet">
     Username: <input type="text" name="username"/> <br/>
     Password: <input type="password" name="password"/> <br/>
     <input type="submit" value="Login" />
 </form>
+<center><h1>Student Involvement</h1></center>
+
 <h3>Events:</h3>
 <ul>
     <li>Sporting events: 5 points</li>
@@ -25,21 +27,136 @@
 </ul>
 
 
-<center><h1>Student Involvement</h1></center>
-<p>FBLA</p>
+<form name="myForm" action="/action_page.php" method="get">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="button" onclick="formSubmit()" value="Send form data!">
+</form>
 
-<h6>Did you attend the dance this quarter?</h6>
-<button type="button">Click Me!</button>
-
-
-
-
-
-
-
-
-
-
+<center>
+<h4>Did you attend the dance this quarter?</h4>
+<div>
+  <label>
+    <input type="radio" name="choice-radio">
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="choice-radio">
+    No
+  </label>
+</div>
+<br>
+<h4>Did you attend the Football game this quarter?</h4>
+<div>
+  <label>
+    <input type="radio" name="choice-radio">
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="choice-radio">
+    No
+  </label>
+</div>
+<br>
+<h4>Did you attend the athletic fundraiser this quarter?</h4>
+<div>
+  <label>
+    <input type="radio" name="choice-radio">
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="choice-radio">
+    No
+  </label>
+</div>
+<br>
+<h4>Did you attend the band concert this quarter?</h4>
+<div>
+  <label>
+    <input type="radio" name="choice-radio">
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="choice-radio">
+    No
+  </label>
+</div>
+<br>
+<h4>Did you attend the Basketball game this quarter?</h4>
+<div>
+  <label>
+    <input type="radio" name="choice-radio">
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="choice-radio">
+    No
+  </label>
+</div>
+<br>
+<h4>Did you attend the class fundraiser this quarter?</h4>
+<div>
+  <label>
+    <input type="radio" name="choice-radio">
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="choice-radio">
+    No
+  </label>
+</div>
+<br>
+<h4>Did you attend the Baseball game this quarter?</h4>
+<div>
+  <label>
+    <input type="radio" name="choice-radio">
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="choice-radio">
+    No
+  </label>
+</div>
+<br>
+<h4>Did you attend the chorus concert this quarter?</h4>
+<div>
+  <label>
+    <input type="radio" name="choice-radio">
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="choice-radio">
+    No
+  </label>
+</div>
+<br>
+<h4>Did you attend the Esports competition this quarter?</h4>
+<div>
+  <label>
+    <input type="radio" name="choice-radio">
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="choice-radio">
+    No
+  </label>
+</div>
+<br>
+<h4>Did you attend the track meet this quarter?</h4>
+<div>
+  <label>
+    <input type="radio" name="choice-radio">
+    Yes
+  </label>
+  <label>
+    <input type="radio" name="choice-radio">
+    No
+  </label>
+</div>
+<br>
+</center>
 
 
 
