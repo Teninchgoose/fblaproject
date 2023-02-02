@@ -45,8 +45,8 @@ public class SaveData extends HttpServlet {
 
 		// Create a new BasicDBObject to store user data
 		BasicDBObject userData = new BasicDBObject();
-		userData.put("name", name);
-		userData.put("email", email);
+		userData.put("fname", name);
+		userData.put("lname", email);
 		userData.put("password", password);
 
 		// Save user data to the collection
