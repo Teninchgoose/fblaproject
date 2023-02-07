@@ -1,16 +1,13 @@
-var firstName = document.getElementById("fname").value;
-var lastName = document.getElementById("lname").value;
-var grade = document.getElementById("grade").value;
+var firstName = "";
+var lastName = "";
+var grade = 0;
 var points = 0;
 
-const fs = require('fs');
 
-const text = process.argv[2];
-
-fs.writeFile('output.txt', text, (err) => {
-  if (err) throw err;
-  console.log('Text was successfully exported to the file.');
-});
+onEvent("generate", "click", function(event))
+{
+calculatePoints();
+}
 
 
 function calculatePoints() {
