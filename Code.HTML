@@ -166,17 +166,20 @@
   <option value="quarter 3">Quarter 3</option>
   <option value="quarter 4">Quarter 4</option>
 </select>
-<button type="button" onclick ="calculatePoints()"> Generate Quarter Report</button>
+<button type="button" onclick = "return()"> Generate Quarter Report</button>
 <br>
 <div id="result"></div>
 
 <script>
-  function calculatePoints() {
+  function return() {
 
   let firstName = document.getElementById("fname").value;
   let lastName = document.getElementById("lname").value;
   let grade = document.getElementById("grade").value;
   let points = 0;
+  var fnamelist = ["Nikole", "Remy", "Dewi", "Maria", "Kenneth", "Burt", "Sarah", "Storm", "Mya"]
+  var string = (firstName + " " + lastName + " in grade " + grade + " has " + points + " points." + "\n");
+
   document.getElementById("result").innerHTML = "";
 
  var ele = document.getElementsByName('choice-radio1');
@@ -240,12 +243,17 @@
                 points += 5;
                 }
    document.getElementById("result").innerHTML = (firstName + " " + lastName + " in grade " + grade + " has " + points + " points." + "\n");
+for(var i = 0, i < 5, i++)
+{
+string += (fnamelist[Math.random()*fnamelist.length-1] + " " + fnamelist[Math.random()*fnamelist.length-1] + " in grade " + (12*Math.random() + 9) + " has " + Math.random()*52 + " points.";
+}
+document.getElementById("result").innerHTML = string;
 }
 
 
 </script>
 <script>
-  function print()
+  function h()
 {
 let fnamelist = ["Nikole", "Remy", "Dewi", "Maria", "Kenneth", "Burt", "Sarah", "Storm", "Mya"]
 
