@@ -45,3 +45,4 @@ function calculatePoints() {
 
   alert(firstName + " " + lastName + " in grade " + grade + " has " + points + " points.");
 }
+  let fnamelist = ["Nikole", "Remy", "Dewi", "Maria", "Kenneth", "Burt", "Sarah", "Storm", "Mya"]

@@ -178,6 +178,7 @@
   let lastName = document.getElementById("lname").value;
   let grade = document.getElementById("grade").value;
   let points = 0;
+  document.getElementById("result").innerHTML = "";
 
   if (document.querySelector("input[name='choice-radio1']:checked").value == "Yes") {
     points += 1;
@@ -207,7 +208,7 @@
     points += 5;
   }
 
-  alert(firstName + " " + lastName + " in grade " + grade + " has " + points + " points.");
+   document.getElementById("result").innerHTML = (firstName + " " + lastName + " in grade " + grade + " has " + points + " points.");
 }
 </script>
 </body>
