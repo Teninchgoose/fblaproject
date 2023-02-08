@@ -4,10 +4,6 @@ var grade = 0;
 var points = 0;
 
 
-onEvent("generate", "click", function(event))
-{
-calculatePoints();
-}
 
 
 function calculatePoints() {
