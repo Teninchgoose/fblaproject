@@ -3,7 +3,10 @@ var lastName = "";
 var grade = 0;
 var points = 0;
 
-
+onEvent("generate", "click", function())
+{
+calculatePoints();
+}
 
 
 function calculatePoints() {
