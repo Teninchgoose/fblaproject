@@ -159,8 +159,6 @@
 </div>
 <br>
 </center>
-  <input type="button" onclick="formSubmit()" value="Submit Data">
-
 
 <select name="Select Quarter" id="quarter">
   <option value="quarter 1">Quarter 1</option>
@@ -174,41 +172,89 @@
 
 <script>
   function calculatePoints() {
+
   let firstName = document.getElementById("fname").value;
   let lastName = document.getElementById("lname").value;
   let grade = document.getElementById("grade").value;
   let points = 0;
   document.getElementById("result").innerHTML = "";
 
-  if (document.querySelector("input[name='choice-radio1']:checked").value == "Yes") {
-    points += 1;
-  }
-  if (document.querySelector("input[name='choice-radio2']:checked").value == "Yes") {
-    points += 5;
-  }
-  if (document.querySelector("input[name='choice-radio3']:checked").value == "Yes") {
-    points += 10;
-  }
-  if (document.querySelector("input[name='choice-radio4']:checked").value == "Yes") {
-    points += 3;
-  }
-  if (document.querySelector("input[name='choice-radio5']:checked").value == "Yes") {
-    points += 5;
-  }
-  if (document.querySelector("input[name='choice-radio6']:checked").value == "Yes") {
-    points += 10;
-  }
-  if (document.querySelector("input[name='choice-radio7']:checked").value == "Yes") {
-    points += 5;
-  }
-  if (document.querySelector("input[name='choice-radio8']:checked").value == "Yes") {
-    points += 3;
-  }
-  if (document.querySelector("input[name='choice-radio9']:checked").value == "Yes") {
-    points += 5;
-  }
+ var ele = document.getElementsByName('choice-radio1');
 
-   document.getElementById("result").innerHTML = (firstName + " " + lastName + " in grade " + grade + " has " + points + " points.");
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked)
+                points += 1;
+                }
+   var ele2 = document.getElementsByName('choice-radio2');
+
+            for(i = 0; i < ele2.length; i++) {
+                if(ele2[i].checked)
+                points += 5;
+                }
+   var ele3 = document.getElementsByName('choice-radio3');
+
+            for(i = 0; i < ele3.length; i++) {
+                if(ele3[i].checked)
+                points += 10;
+                }
+   var ele4 = document.getElementsByName('choice-radio4');
+
+            for(i = 0; i < ele4.length; i++) {
+                if(ele4[i].checked)
+                points += 3;
+                }
+   var ele5 = document.getElementsByName('choice-radio5');
+
+            for(i = 0; i < ele5.length; i++) {
+                if(ele5[i].checked)
+                points += 5;
+                }
+   var ele6 = document.getElementsByName('choice-radio6');
+
+            for(i = 0; i < ele6.length; i++) {
+                if(ele6[i].checked)
+                points += 10;
+                }
+   var ele7 = document.getElementsByName('choice-radio7');
+
+            for(i = 0; i < ele7.length; i++) {
+                if(ele7[i].checked)
+                points += 5;
+                }
+   var ele8 = document.getElementsByName('choice-radio8');
+
+            for(i = 0; i < ele8.length; i++) {
+                if(ele8[i].checked)
+                points += 3;
+                }
+   var ele9 = document.getElementsByName('choice-radio9');
+
+            for(i = 0; i < ele9.length; i++) {
+                if(ele9[i].checked)
+                points += 5;
+                }
+  var ele10 = document.getElementsByName('choice-radio10');
+
+            for(i = 0; i < ele10.length; i++) {
+                if(ele10[i].checked)
+                points += 5;
+                }
+   document.getElementById("result").innerHTML = (firstName + " " + lastName + " in grade " + grade + " has " + points + " points." + "\n");
+}
+
+
+</script>
+<script>
+  function print()
+{
+let fnamelist = ["Nikole", "Remy", "Dewi", "Maria", "Kenneth", "Burt", "Sarah", "Storm", "Mya"]
+
+let string = (firstName + " " + lastName + " in grade " + grade + " has " + points + " points." + "\n");
+for(var i = 0, i < 5, i++)
+{
+string += (fnamelist[Math.random()*fnamelist.length-1] + " " + fnamelist[Math.random()*fnamelist.length-1] + " in grade " + (12*Math.random() + 9) + " has " + Math.random()*52 + " points.";
+}
+document.getElementById("result").innerHTML = string;
 }
 </script>
 </body>
