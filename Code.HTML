@@ -40,14 +40,8 @@
 <center>
 <h4>Did you attend the dance this quarter?</h4>
 <div>
-  <label>
-    <input type="radio" name="choice-radio1">
-    Yes
-  </label>
-  <label>
-    <input type="radio" name="choice-radio1">
-    No
-  </label>
+  <input type="checkbox" id="answer1" name="answer1" value="Bike">
+  <label for="answer1"> Yes I have attended.</label><br>
 </div>
 <br>
 <h4>Did you attend the Football game this quarter?</h4>
@@ -166,27 +160,30 @@
   <option value="quarter 3">Quarter 3</option>
   <option value="quarter 4">Quarter 4</option>
 </select>
-<button type="button" onclick = "return()"> Generate Quarter Report</button>
+<button type="button" onclick = "calculatePoints()"> Generate Quarter Report</button>
 <br>
-<div id="result"></div>
 
+
+
+<input type="text" id="num1" value="2">
+<input type="text" id="num2" value="3">
+<button onclick="calc()">Calculate</button>
+<p>Result: <span id="result"></span></p>
+</body>
 <script>
-  function return() {
+  function calculatePoints() {
 
   let firstName = document.getElementById("fname").value;
   let lastName = document.getElementById("lname").value;
   let grade = document.getElementById("grade").value;
   let points = 0;
-  var fnamelist = ["Nikole", "Remy", "Dewi", "Maria", "Kenneth", "Burt", "Sarah", "Storm", "Mya"]
-  var string = (firstName + " " + lastName + " in grade " + grade + " has " + points + " points." + "\n");
-
   document.getElementById("result").innerHTML = "";
 
- var ele = document.getElementsByName('choice-radio1');
-
-            for(i = 0; i < ele.length; i++) {
-                if(ele[i].checked)
-                points += 1;
+ const cb = document.querySelector('#answer1');
+      if(cb.checked)
+      {
+      points += 1;
+      }
 
 
    var ele2 = document.getElementsByName('choice-radio2');
@@ -201,12 +198,15 @@
                 if(ele3[i].checked)
                 points += 10;
                 }
-   var ele4 = document.getElementsByName('choice-radio4');
+  var ele4 = document.getElementsByName('choice-radio4');
 
-            for(i = 0; i < ele4.length; i++) {
-                if(ele4[i].checked)
-                points += 3;
-                }
+for (i = 0; i < ele4.length; i++) {
+  if (ele4[i].checked) {
+    var selectedText = ele4[i].nextSibling.nodeValue;
+      if(selectedText === "Yes")
+        points += 3;
+  }
+}
    var ele5 = document.getElementsByName('choice-radio5');
 
             for(i = 0; i < ele5.length; i++) {
@@ -243,30 +243,22 @@
                 if(ele10[i].checked)
                 points += 5;
                 }
-   document.getElementById("result").innerHTML = (firstName + " " + lastName + " in grade " + grade + " has " + points + " points." + "\n");
-
-
-
+   document.getElementById("result").innerHTML = (firstName + " " + lastName + " in grade " + grade + " has " + points + " points.");
+  console.log(points);
+  }
 </script>
 <script>
-for(var i = 0, i < 5, i++)
-{
-string += (fnamelist[Math.random()*fnamelist.length-1] + " " + fnamelist[Math.random()*fnamelist.length-1] + " in grade " + (12*Math.random() + 9) + " has " + Math.random()*52 + " points.";
-}
-document.getElementById("result").innerHTML = string;
-}
-  function h()
-{
-let fnamelist = ["Nikole", "Remy", "Dewi", "Maria", "Kenneth", "Burt", "Sarah", "Storm", "Mya"]
-
-let string = (firstName + " " + lastName + " in grade " + grade + " has " + points + " points." + "\n");
-for(var i = 0, i < 5, i++)
-{
-string += (fnamelist[Math.random()*fnamelist.length-1] + " " + fnamelist[Math.random()*fnamelist.length-1] + " in grade " + (12*Math.random() + 9) + " has " + Math.random()*52 + " points.";
-}
-document.getElementById("result").innerHTML = string;
-}
-</script>
+    function calc() {
+      console.log("Button clicked");
+      var num1 = document.getElementById("num1").value;
+      console.log("num1:", num1);
+      var num2 = document.getElementById("num2").value;
+      console.log("num2:", num2);
+      var result = document.getElementById("result");
+      console.log("result before update:", result.innerHTML);
+      result.innerHTML = num1 * num2;
+      console.log("result after update:", result.innerHTML);
+    }
+  </script>
 </body>
 </html>
-
