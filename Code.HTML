@@ -187,7 +187,8 @@
             for(i = 0; i < ele.length; i++) {
                 if(ele[i].checked)
                 points += 1;
-                }
+
+
    var ele2 = document.getElementsByName('choice-radio2');
 
             for(i = 0; i < ele2.length; i++) {
@@ -243,16 +244,17 @@
                 points += 5;
                 }
    document.getElementById("result").innerHTML = (firstName + " " + lastName + " in grade " + grade + " has " + points + " points." + "\n");
+
+
+
+</script>
+<script>
 for(var i = 0, i < 5, i++)
 {
 string += (fnamelist[Math.random()*fnamelist.length-1] + " " + fnamelist[Math.random()*fnamelist.length-1] + " in grade " + (12*Math.random() + 9) + " has " + Math.random()*52 + " points.";
 }
 document.getElementById("result").innerHTML = string;
 }
-
-
-</script>
-<script>
   function h()
 {
 let fnamelist = ["Nikole", "Remy", "Dewi", "Maria", "Kenneth", "Burt", "Sarah", "Storm", "Mya"]
