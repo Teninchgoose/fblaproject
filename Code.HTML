@@ -40,116 +40,62 @@
 <center>
 <h4>Did you attend the dance this quarter?</h4>
 <div>
-  <input type="checkbox" id="answer1" name="answer1" value="Bike">
+  <input type="checkbox" id="answer1" name="answer1">
   <label for="answer1"> Yes I have attended.</label><br>
 </div>
 <br>
 <h4>Did you attend the Football game this quarter?</h4>
 <div>
-  <label>
-    <input type="radio" name="choice-radio2">
-    Yes
-  </label>
-  <label>
-    <input type="radio" name="choice-radio2">
-    No
-  </label>
+    <input type="checkbox" id="answer2" name="answer2">
+    <label for="answer2"> Yes I attended.</label><br>
 </div>
 <br>
 <h4>Did you attend the athletic fundraiser this quarter?</h4>
 <div>
-  <label>
-    <input type="radio" name="choice-radio3">
-    Yes
-  </label>
-  <label>
-    <input type="radio" name="choice-radio3">
-    No
-  </label>
+    <input type="checkbox" id="answer3" name="answer3">
+    <label for="answer3"> Yes I attended.</label><br>
 </div>
 <br>
 <h4>Did you attend the band concert this quarter?</h4>
 <div>
-  <label>
-    <input type="radio" name="choice-radio4">
-    Yes
-  </label>
-  <label>
-    <input type="radio" name="choice-radio4">
-    No
-  </label>
+  <input type="checkbox" id="answer4" name="answer4">
+    <label for="answer4"> Yes I attended.</label><br>
 </div>
 <br>
 <h4>Did you attend the Basketball game this quarter?</h4>
 <div>
-  <label>
-    <input type="radio" name="choice-radio5">
-    Yes
-  </label>
-  <label>
-    <input type="radio" name="choice-radio5">
-    No
-  </label>
+  <input type="checkbox" id="answer5" name="answer5">
+    <label for="answer5"> Yes I attended.</label><br>
 </div>
 <br>
 <h4>Did you attend the class fundraiser this quarter?</h4>
 <div>
-  <label>
-    <input type="radio" name="choice-radio6">
-    Yes
-  </label>
-  <label>
-    <input type="radio" name="choice-radio6">
-    No
-  </label>
+ <input type="checkbox" id="answer6" name="answer6">
+    <label for="answer6"> Yes I attended.</label><br>
 </div>
 <br>
 <h4>Did you attend the Baseball game this quarter?</h4>
 <div>
-  <label>
-    <input type="radio" name="choice-radio7">
-    Yes
-  </label>
-  <label>
-    <input type="radio" name="choice-radio7">
-    No
-  </label>
+  <input type="checkbox" id="answer7" name="answer7">
+    <label for="answer7"> Yes I attended.</label><br>
 </div>
 <br>
 <h4>Did you attend the chorus concert this quarter?</h4>
 <div>
-  <label>
-    <input type="radio" name="choice-radio8">
-    Yes
-  </label>
-  <label>
-    <input type="radio" name="choice-radio8">
-    No
-  </label>
+  <input type="checkbox" id="answer8" name="answer8">
+    <label for="answer8"> Yes I attended.</label><br>
 </div>
 <br>
 <h4>Did you attend the Esports competition this quarter?</h4>
 <div>
-  <label>
-    <input type="radio" name="choice-radio9">
-    Yes
-  </label>
-  <label>
-    <input type="radio" name="choice-radio9">
-    No
-  </label>
+  <input type="checkbox" id="answer9" name="answer9">
+    <label for="answer9"> Yes I attended.</label><br>
 </div>
 <br>
 <h4>Did you attend the track meet this quarter?</h4>
 <div>
-  <label>
-    <input type="radio" name="choice-radio10">
-    Yes
-  </label>
-  <label>
-    <input type="radio" name="choice-radio10">
-    No
-  </label>
+ <input type="checkbox" id="answer10" name="answer10">
+    <label for="answer10"> Yes I attended.</label><br>
 </div>
 <br>
 </center>
@@ -160,104 +106,77 @@
   <option value="quarter 3">Quarter 3</option>
   <option value="quarter 4">Quarter 4</option>
 </select>
-<button type="button" onclick = "calculatePoints()"> Generate Quarter Report</button>
+<button type="button" onclick = "calculate()"> Generate Quarter Report</button>
 <br>
 
 
 
-<input type="text" id="num1" value="2">
-<input type="text" id="num2" value="3">
-<button onclick="calc()">Calculate</button>
-<p>Result: <span id="result"></span></p>
+<p>Report: <span id="result"></span></p>
+<p><span id="line2"></span></p>
+<p><span id="line3"></span></p>
+<p><span id="line4"></span></p>
+<p><span id="line5"></span></p>
+<p><span id="line6"></span></p>
 </body>
 <script>
-  function calculatePoints() {
 
-  let firstName = document.getElementById("fname").value;
-  let lastName = document.getElementById("lname").value;
-  let grade = document.getElementById("grade").value;
-  let points = 0;
-  document.getElementById("result").innerHTML = "";
+  function calculate() {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var grade = document.getElementById("grade").value;
+        var quarter = document.getElementById("quarter").value;
+        var points = 0;
+        if(fname == "")
+        {
+        document.getElementById("result").innerHTML = "Please enter a first name!";
+        }
+        if(lname == "")
+        {
+        document.getElementById("result").innerHTML = "Please enter a first name!";
+        }
+        if (document.getElementById("answer1").checked) {
+            points += 1;
+        }
+        if (document.getElementById("answer2").checked) {
+            points += 5;
+        }
+        if (document.getElementById("answer3").checked) {
+            points += 10;
+        }
+        if (document.getElementById("answer4").checked) {
+            points += 3;
+        }
+        if (document.getElementById("answer5").checked) {
+            points += 5;
+        }
+        if (document.getElementById("answer6").checked) {
+            points += 10;
+        }
+        if (document.getElementById("answer7").checked) {
+            points += 5;
+        }
+        if (document.getElementById("answer8").checked) {
+            points += 3;
+        }
+        if (document.getElementById("answer9").checked) {
+            points += 0;
+        }
+        if (document.getElementById("answer10").checked) {
+            points += 5;
+        }
 
- const cb = document.querySelector('#answer1');
-      if(cb.checked)
-      {
-      points += 1;
-      }
+        document.getElementById("result").innerHTML = fname + " " + lname + " from grade " + grade + " scored " + points + " points during " + quarter;
 
-
-   var ele2 = document.getElementsByName('choice-radio2');
-
-            for(i = 0; i < ele2.length; i++) {
-                if(ele2[i].checked)
-                points += 5;
-                }
-   var ele3 = document.getElementsByName('choice-radio3');
-
-            for(i = 0; i < ele3.length; i++) {
-                if(ele3[i].checked)
-                points += 10;
-                }
-  var ele4 = document.getElementsByName('choice-radio4');
-
-for (i = 0; i < ele4.length; i++) {
-  if (ele4[i].checked) {
-    var selectedText = ele4[i].nextSibling.nodeValue;
-      if(selectedText === "Yes")
-        points += 3;
-  }
-}
-   var ele5 = document.getElementsByName('choice-radio5');
-
-            for(i = 0; i < ele5.length; i++) {
-                if(ele5[i].checked)
-                points += 5;
-                }
-   var ele6 = document.getElementsByName('choice-radio6');
-
-            for(i = 0; i < ele6.length; i++) {
-                if(ele6[i].checked)
-                points += 10;
-                }
-   var ele7 = document.getElementsByName('choice-radio7');
-
-            for(i = 0; i < ele7.length; i++) {
-                if(ele7[i].checked)
-                points += 5;
-                }
-   var ele8 = document.getElementsByName('choice-radio8');
-
-            for(i = 0; i < ele8.length; i++) {
-                if(ele8[i].checked)
-                points += 3;
-                }
-   var ele9 = document.getElementsByName('choice-radio9');
-
-            for(i = 0; i < ele9.length; i++) {
-                if(ele9[i].checked)
-                points += 5;
-                }
-  var ele10 = document.getElementsByName('choice-radio10');
-
-            for(i = 0; i < ele10.length; i++) {
-                if(ele10[i].checked)
-                points += 5;
-                }
-   document.getElementById("result").innerHTML = (firstName + " " + lastName + " in grade " + grade + " has " + points + " points.");
-  console.log(points);
-  }
-</script>
-<script>
-    function calc() {
-      console.log("Button clicked");
-      var num1 = document.getElementById("num1").value;
-      console.log("num1:", num1);
-      var num2 = document.getElementById("num2").value;
-      console.log("num2:", num2);
-      var result = document.getElementById("result");
-      console.log("result before update:", result.innerHTML);
-      result.innerHTML = num1 * num2;
-      console.log("result after update:", result.innerHTML);
+        if (points >= 20) {
+            document.getElementById("line2").innerHTML = "Congratulations! You have earned a Homework Pass!";
+        }
+        if (points >= 50) {
+            document.getElementById("line3").innerHTML = "Awesome! You have earned a Restaurant Gift Card!";
+        }
+        if (points >= 100) {
+            document.getElementById("line3").innerHTML = "Wow! You have earned a School Swag Bag!";
+        }
     }
-  </script>
+
+</script>
 </html>
