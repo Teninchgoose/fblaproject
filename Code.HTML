@@ -17,9 +17,9 @@
 <br>
 <h3>Prizes:</h3>
 <ul>
-    <li>Homework Pass: 20 points</li>
-    <li>Restaurant Gift Card: 50 points</li>
-    <li>School Swag Bag: 100 points</li>
+    <li>Homework Pass: 10 points</li>
+    <li>Restaurant Gift Card: 25 points</li>
+    <li>School Swag Bag: 50 points</li>
 </ul>
 
 
@@ -112,11 +112,15 @@
 
 
 <p>Report: <span id="result"></span></p>
+<p> <span id="result1"></span></p>
+<p> <span id="result2"></span></p>
+<p> <span id="result3"></span></p>
+<p> <span id="result4"></span></p>
+<p> <span id="result5"></span></p>
 <p><span id="line2"></span></p>
 <p><span id="line3"></span></p>
-<p><span id="line4"></span></p>
-<p><span id="line5"></span></p>
-<p><span id="line6"></span></p>
+<p>Most Points: <span id="line4"></span></p>
+<p>Winner: <span id="line5"></span></p>
 </body>
 <script>
 
@@ -126,14 +130,21 @@
         var grade = document.getElementById("grade").value;
         var quarter = document.getElementById("quarter").value;
         var points = 0;
+        var student1 = "Carley Barbra from grade 10 scored 35 points during " + quarter + "\n";
+        var student2 = "Brian Grant from grade 9 scored 45 points during " + quarter + "\n";
+        var student3 = "Jillian Leahy from grade 12 scored 50 points during " + quarter + "\n";
+        var student4 = "Christian Toro from grade 12 scored 25 points during " + quarter + "\n";
+        var student5 = "Carley Barbra from grade 10 scored 15 points during " + quarter;
+
         if(fname == "")
         {
         document.getElementById("result").innerHTML = "Please enter a first name!";
         }
-        if(lname == "")
+        else if(lname == "")
         {
-        document.getElementById("result").innerHTML = "Please enter a first name!";
+        document.getElementById("result").innerHTML = "Please enter a last name!";
         }
+        else{
         if (document.getElementById("answer1").checked) {
             points += 1;
         }
@@ -159,23 +170,36 @@
             points += 3;
         }
         if (document.getElementById("answer9").checked) {
-            points += 0;
+            points += 5;
         }
         if (document.getElementById("answer10").checked) {
             points += 5;
         }
 
         document.getElementById("result").innerHTML = fname + " " + lname + " from grade " + grade + " scored " + points + " points during " + quarter;
+        document.getElementById("result1").innerHTML = student1;
+        document.getElementById("result2").innerHTML = student2;
+        document.getElementById("result3").innerHTML = student3;
+        document.getElementById("result4").innerHTML = student4;
+        document.getElementById("result5").innerHTML = student5;
 
-        if (points >= 20) {
+        if (points >= 10) {
             document.getElementById("line2").innerHTML = "Congratulations! You have earned a Homework Pass!";
         }
-        if (points >= 50) {
+        if (points >= 25) {
             document.getElementById("line3").innerHTML = "Awesome! You have earned a Restaurant Gift Card!";
         }
-        if (points >= 100) {
+        if (points >= 50) {
             document.getElementById("line3").innerHTML = "Wow! You have earned a School Swag Bag!";
         }
+        }
+        //Determines most points
+        if(points > 35 && 45 && 50 && 25 && 15)
+        {
+        document.getElementById("line4) = fname + " " + lname + " with " + points + "points.";
+         }
+         else if(35
+
     }
 
 </script>
