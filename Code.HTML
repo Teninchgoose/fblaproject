@@ -135,7 +135,8 @@
         var student3 = "Jillian Leahy from grade 12 scored 50 points during " + quarter + "\n";
         var student4 = "Christian Toro from grade 12 scored 25 points during " + quarter + "\n";
         var student5 = "Carley Barbra from grade 10 scored 15 points during " + quarter;
-
+        var random = Math.round(Math.random()*4);
+        console.log(random);
         if(fname == "")
         {
         document.getElementById("result").innerHTML = "Please enter a first name!";
@@ -184,7 +185,7 @@
         document.getElementById("result5").innerHTML = student5;
 
         if (points >= 10) {
-            document.getElementById("line2").innerHTML = "Congratulations! You have earned a Homework Pass!";
+            document.getElementById("line3").innerHTML = "Congratulations! You have earned a Homework Pass!";
         }
         if (points >= 25) {
             document.getElementById("line3").innerHTML = "Awesome! You have earned a Restaurant Gift Card!";
@@ -194,11 +195,35 @@
         }
         }
         //Determines most points
-        if(points > 35 && 45 && 50 && 25 && 15)
+        if(points > 50)
         {
-        document.getElementById("line4) = fname + " " + lname + " with " + points + "points.";
+        document.getElementById("line4").innerHTML = fname + " " + lname + " with " + points + " points.";
          }
-         else if(35
+         else if(50 > points)
+         {
+         document.getElementById("line4").innerHTML = "Jillian Leahy with 50 points.";
+         }
+         //Random Winner
+            if(random == 0)
+            {
+            document.getElementById("line5").innerHTML = fname + " " + lname;
+            }
+            else if(random == 1)
+            {
+            document.getElementById("line5").innerHTML = "Carley Barbra";
+            }
+             else if(random == 2)
+            {
+            document.getElementById("line5").innerHTML = "Brian Grant";
+            }
+             else if(random == 3)
+            {
+            document.getElementById("line5").innerHTML = "Jillian Leahy";
+            }
+             else if(random == 4)
+            {
+            document.getElementById("line5").innerHTML = "Christian Toro";
+            }
 
     }
 
