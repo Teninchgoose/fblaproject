@@ -4,16 +4,20 @@
  {
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://aidanm5634:<password>@cluster0.mvdn7wp.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+const uri = "mongodb+srv://aidanm5634:<Aidan213>@cluster0.mvdn7wp.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri);
+try {
+await client.connect();
+
+await listDatabases(client);
+} catch (e) {
+console.error(e);
+} finally {
+    await client.close();
+}
 
  }
-
+ main().catch(console.error);
 
 
 
