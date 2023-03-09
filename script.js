@@ -1,13 +1,20 @@
+// This function is triggered when the "Submit" button is clicked on the HTML page
 function calculate() {
+// Retrieve the input values entered by the user
+
     var fname = document.getElementById("fname").value;
     var lname = document.getElementById("lname").value;
     var grade = document.getElementById("grade").value;
     var quarter = document.getElementById("quarter").value;
+   // Initialize the points variable to 0, and generate random points for 4 students
+
     var points = 0;
     var points1 = Math.round(Math.random()*52);
     var points2 = Math.round(Math.random()*52);
     var points3 = Math.round(Math.random()*52);
     var points4 = Math.round(Math.random()*52);
+
+// Create strings for each student's name and points
 
     var student1 = "Carley Barbra from grade 10 scored " + points1 +" points during " + quarter + "\n";
     var student2 = "Brian Grant from grade 9 scored " + points2 + " points during " + quarter + "\n";
@@ -15,6 +22,8 @@ function calculate() {
     var student4 = "Christian Toro from grade 12 scored " + points4 + " points during " + quarter + "\n";
     var random = Math.round(Math.random()*4);
     console.log(random);
+    // Check if the user has entered a first and last name
+
     if(fname == "")
     {
         document.getElementById("result").innerHTML = "Please enter a first name!";
@@ -24,6 +33,8 @@ function calculate() {
         document.getElementById("result").innerHTML = "Please enter a last name!";
     }
     else {
+        // If the user has entered a name, check the answers they selected and add points accordingly
+
         if (document.getElementById("answer1").checked) {
             points += 1;
         }
@@ -55,12 +66,14 @@ function calculate() {
             points += 5;
         }
 
+    // Display the user's name, grade, and points scored during the selected quarter
         document.getElementById("result").innerHTML = fname + " " + lname + " from grade " + grade + " scored " + points + " points during " + quarter;
+    // Display the randomly generated scores for each student
         document.getElementById("result1").innerHTML = student1;
         document.getElementById("result2").innerHTML = student2;
         document.getElementById("result3").innerHTML = student3;
         document.getElementById("result4").innerHTML = student4;
-        //Determines most points
+    // Determine the student with the highest points and display their name and points
         if (points > points1 && points > points2 && points > points3 && points > points4) {
     document.getElementById("line4").innerHTML = fname + " " + lname + " with " + points + " points.";
 } else if (points1 > points && points1 > points2 && points1 > points3 && points1 > points4) {

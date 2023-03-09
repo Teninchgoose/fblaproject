@@ -1,64 +1,72 @@
+<!-- This section defines the document type and starts the HTML file -->
 <!DOCTYPE html>
 <html>
 <head>
-<title>Student Involvement</title>
+	<!-- This section defines the page title -->
+	<title>Student Involvement</title>
 </head>
 <body bgcolor="navy" text="white">
+	<!-- This section creates a centered heading for the page -->
+	<center><h1>Student Involvement</h1></center>
+	<!-- This section adds an image to the page -->
+	<img src="https://pbs.twimg.com/profile_images/890410218718449668/0m71meha_400x400.jpg"
+	     jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb"
+	     alt="Lincoln Athletics (@LHSRI_Athletics) / Twitter" data-noaft="1"
+	     style="width: 151px; height: 151px; margin: 0px;">
+	<!-- This section lists the different types of events and their point values -->
+	<h3>Events:</h3>
+	<ul>
+	    <li>Sporting events: 5 points</li>
+	    <li>Concerts: 3 points</li>
+	    <li>Dances: 1 point</li>
+	    <li>Fundraisers: 10 points</li>
+	</ul>
+	<br>
+	<!-- This section lists the available prizes and their point values -->
+	<h3>Prizes:</h3>
+	<ul>
+	    <li>Homework Pass: 10 points</li>
+	    <li>Restaurant Gift Card: 25 points</li>
+	    <li>School Swag Bag: 50 points</li>
+	</ul>
 
-<center><h1>Student Involvement</h1></center>
-<img src="https://pbs.twimg.com/profile_images/890410218718449668/0m71meha_400x400.jpg"
-     jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb"
-     alt="Lincoln Athletics (@LHSRI_Athletics) / Twitter" data-noaft="1"
-     style="width: 151px; height: 151px; margin: 0px;">
-<h3>Events:</h3>
-<ul>
-    <li>Sporting events: 5 points</li>
-    <li>Concerts: 3 points</li>
-    <li>Dances: 1 point</li>
-    <li>Fundraisers: 10 points</li>
-</ul>
-<br>
-<h3>Prizes:</h3>
-<ul>
-    <li>Homework Pass: 10 points</li>
-    <li>Restaurant Gift Card: 25 points</li>
-    <li>School Swag Bag: 50 points</li>
-</ul>
+	<!-- This section creates a form to collect user data -->
+	<form name="myForm" action="/action_page.php" method="get">
+	  <label for="fname">First name:</label>
+	  <input type="text" id="fname" name="fname"><br><br>
+	  <label for="lname">Last name:</label>
+	  <input type="text" id="lname" name="lname"><br><br>
+	</form>
 
+	<!-- This section creates a dropdown menu for the user's grade level -->
+	<label for="grade">Grade:</label>
+	<select name="Select Grade" id="grade">
+	  <option value="9">9</option>
+	  <option value="10">10</option>
+	  <option value="11">11</option>
+	  <option value="12">12</option>
+	</select>
 
-<form name="myForm" action="/action_page.php" method="get">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-</form>
-<label for="grade">Grade:</label>
-<select name="Select Grade" id="grade">
-  <option value="9">9</option>
-  <option value="10">10</option>
-  <option value="11">11</option>
-  <option value="12">12</option>
-</select>
-
-<center>
-<h4>Did you attend the dance this quarter?</h4>
-<div>
-  <input type="checkbox" id="answer1" name="answer1">
-  <label for="answer1"> Yes I have attended.</label><br>
-</div>
-<br>
-<h4>Did you attend the Football game this quarter?</h4>
-<div>
-    <input type="checkbox" id="answer2" name="answer2">
-    <label for="answer2"> Yes I attended.</label><br>
-</div>
-<br>
-<h4>Did you attend the athletic fundraiser this quarter?</h4>
-<div>
-    <input type="checkbox" id="answer3" name="answer3">
-    <label for="answer3"> Yes I attended.</label><br>
-</div>
-<br>
+	<!-- This section creates a series of checkboxes to indicate which events the user attended -->
+	<center>
+	<h4>Did you attend the dance this quarter?</h4>
+	<div>
+	  <input type="checkbox" id="answer1" name="answer1">
+	  <label for="answer1"> Yes I have attended.</label><br>
+	</div>
+	<br>
+	<h4>Did you attend the Football game this quarter?</h4>
+	<div>
+	    <input type="checkbox" id="answer2" name="answer2">
+	    <label for="answer2"> Yes I attended.</label><br>
+	</div>
+	<br>
+	<h4>Did you attend the athletic fundraiser this quarter?</h4>
+	<div>
+	    <input type="checkbox" id="answer3" name="answer3">
+	    <label for="answer3"> Yes I attended.</label><br>
+	</div>
+	<br>
 <h4>Did you attend the band concert this quarter?</h4>
 <div>
   <input type="checkbox" id="answer4" name="answer4">
@@ -102,7 +110,7 @@
 </div>
 <br>
 </center>
-
+<!---This section creates a dropdown for the user to input the quarter they want a report for--->
 <select name="Select Quarter" id="quarter">
   <option value="quarter 1">Quarter 1</option>
   <option value="quarter 2">Quarter 2</option>
@@ -113,7 +121,7 @@
 <br>
 
 
-
+<!--- Creates an area for the results to be output--->
 <p>Report: <span id="result"></span></p>
 <p> <span id="result1"></span></p>
 <p> <span id="result2"></span></p>
